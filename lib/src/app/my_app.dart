@@ -1,4 +1,4 @@
-import 'package:anime_app/src/components/theme/theme.dart';
+import 'package:anime_app/src/config/theme/theme.dart';
 import 'package:anime_app/src/futures/auth/logic/authentication/authentication_bloc.dart';
 import 'package:anime_app/src/futures/auth/pages/welcome_screen.dart';
 import 'package:anime_app/src/futures/home/pages/home_screen.dart';
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          theme: themeData,
+          theme: AppTheme.lightTheme,
           home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
             builder: (context, state) {
               if (state.status == AuthenticationStatus.authenticated) {
