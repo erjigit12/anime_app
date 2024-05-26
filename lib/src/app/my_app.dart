@@ -1,7 +1,7 @@
 import 'package:anime_app/src/config/theme/theme.dart';
 import 'package:anime_app/src/futures/auth/logic/authentication/authentication_bloc.dart';
 import 'package:anime_app/src/futures/auth/pages/welcome_screen.dart';
-import 'package:anime_app/src/futures/home/pages/home_screen.dart';
+import 'package:anime_app/src/futures/main/pages/home_screen.dart';
 import 'package:anime_app/src/futures/sign_in/logic/sign_in_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
