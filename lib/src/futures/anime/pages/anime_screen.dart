@@ -1,8 +1,8 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:anime_app/src/futures/sign_in/logic/sign_in_bloc.dart';
+import 'package:anime_app/src/common/styles/paddings.dart';
+import 'package:anime_app/src/views/featured_animes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/widgets/widgets.dart';
 
@@ -29,9 +29,62 @@ class _AnimeScreenState extends State<AnimeScreen> {
       body: const SingleChildScrollView(
         child: Column(
           children: [
+            // Featured Animes (5)
             SizedBox(
               height: 300,
               child: TopAnimeList(),
+            ),
+
+            Padding(
+              padding: Paddings.noBottomPadding,
+              child: Column(
+                children: [
+                  // Top Animes
+                  SizedBox(
+                    height: 350,
+                    child: FeaturedAnimes(
+                      label: 'Top Ranked',
+                      rankingType: 'all',
+                    ),
+                  ),
+
+                  // Top Popular
+                  SizedBox(
+                    height: 350,
+                    child: FeaturedAnimes(
+                      label: 'Top Popular',
+                      rankingType: 'bypopularity',
+                    ),
+                  ),
+
+                  // Top Movies
+                  SizedBox(
+                    height: 350,
+                    child: FeaturedAnimes(
+                      label: 'Top Movies',
+                      rankingType: 'movie',
+                    ),
+                  ),
+
+                  // Top Favorited
+                  SizedBox(
+                    height: 350,
+                    child: FeaturedAnimes(
+                      label: 'Top Favorited',
+                      rankingType: 'favorite',
+                    ),
+                  ),
+
+                  // Top Upcoming
+                  SizedBox(
+                    height: 350,
+                    child: FeaturedAnimes(
+                      label: 'Top Upcoming',
+                      rankingType: 'upcoming',
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
