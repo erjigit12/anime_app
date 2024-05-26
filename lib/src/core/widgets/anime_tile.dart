@@ -3,8 +3,8 @@ import 'package:anime_app/src/models/anime_node.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class AnimesTile extends StatelessWidget {
-  const AnimesTile({
+class AnimeTile extends StatelessWidget {
+  const AnimeTile({
     super.key,
     required this.anime,
   });

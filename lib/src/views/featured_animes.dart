@@ -1,7 +1,8 @@
 import 'package:anime_app/src/api/get_anime_by_ranking_type_api.dart';
 import 'package:anime_app/src/core/screens/error_screen.dart';
-import 'package:anime_app/src/core/widgets/animes_tile.dart';
+import 'package:anime_app/src/core/widgets/anime_tile.dart';
 import 'package:anime_app/src/core/widgets/loader.dart';
+import 'package:anime_app/src/futures/anime/pages/view_all_animes_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -43,7 +44,19 @@ class FeaturedAnimes extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return ViewAllAnimesScreen(
+                                rankingType: rankingType,
+                                label: label,
+                              );
+                            },
+                          ),
+                        );
+                      },
                       child: const Text('View All'),
                     ),
                   ],
@@ -61,7 +74,7 @@ class FeaturedAnimes extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final anime = animes.elementAt(index);
 
-                    return AnimesTile(anime: anime.node);
+                    return AnimeTile(anime: anime.node);
                   },
                 ),
               ),
