@@ -1,6 +1,6 @@
 import 'package:anime_app/src/api/get_anime_by_ranking_type_api.dart';
 import 'package:anime_app/src/core/screens/error_screen.dart';
-import 'package:anime_app/src/core/widgets/top_animes_image_slider.dart';
+import 'package:anime_app/src/futures/anime/widgets/top_animes_image_slider.dart';
 import 'package:anime_app/src/core/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 

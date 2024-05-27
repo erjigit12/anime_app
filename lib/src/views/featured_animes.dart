@@ -1,10 +1,9 @@
 import 'package:anime_app/src/api/get_anime_by_ranking_type_api.dart';
 import 'package:anime_app/src/core/screens/error_screen.dart';
-import 'package:anime_app/src/core/widgets/anime_tile.dart';
+import 'package:anime_app/src/futures/anime/widgets/anime_tile.dart';
 import 'package:anime_app/src/core/widgets/loader.dart';
 import 'package:anime_app/src/futures/anime/pages/view_all_animes_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class FeaturedAnimes extends StatelessWidget {
   const FeaturedAnimes({

@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:anime_app/src/futures/anime/pages/anime_details_screen.dart';
 import 'package:anime_app/src/models/anime.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -85,7 +86,16 @@ class TopAnimePicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return AnimeDetailsScreen(id: anime.node.id);
+            },
+          ),
+        );
+      },
       splashColor: Colors.white,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8.0),

@@ -1,10 +1,9 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:anime_app/src/common/styles/paddings.dart';
+import 'package:anime_app/src/futures/anime/widgets/top_anime_list.dart';
 import 'package:anime_app/src/views/featured_animes.dart';
 import 'package:flutter/material.dart';
-
-import '../../../core/widgets/widgets.dart';
 
 class AnimeScreen extends StatefulWidget {
   const AnimeScreen({super.key});

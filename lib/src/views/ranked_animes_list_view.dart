@@ -1,5 +1,5 @@
 import 'package:anime_app/src/common/styles/paddings.dart';
-import 'package:anime_app/src/core/widgets/anime_list_tile.dart';
+import 'package:anime_app/src/futures/anime/widgets/anime_list_tile.dart';
 import 'package:anime_app/src/models/anime.dart';
 import 'package:flutter/material.dart';
 
