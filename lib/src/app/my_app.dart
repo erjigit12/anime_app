@@ -28,6 +28,11 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => LanguageCubit(),
         ),
+        BlocProvider(
+          create: (context) => SignInBloc(
+              userRepository:
+                  context.read<AuthenticationBloc>().userRepository),
+        ),
       ],
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, state) {

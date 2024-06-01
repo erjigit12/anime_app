@@ -1,8 +1,8 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:anime_app/src/common/styles/paddings.dart';
 import 'package:anime_app/src/futures/settings/logic/language/language_cubit.dart';
 import 'package:anime_app/src/futures/settings/logic/theme/theme_cubit.dart';
+import 'package:anime_app/src/futures/sign_in/logic/sign_in_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,14 +22,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
         title: const Text('Settings'),
         centerTitle: true,
       ),
-      body: const Padding(
-        padding: Paddings.defaultPadding,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            ThemeSwitchWidget(),
-            SizedBox(height: 20),
-            AnimeTitleLanguageSwitch(),
+            IconButton(
+              onPressed: () {
+                context.read<SignInBloc>().add(const SignOutRequired());
+              },
+              style: const ButtonStyle(
+                iconColor: MaterialStatePropertyAll(Colors.red),
+                iconSize: MaterialStatePropertyAll(30),
+              ),
+              icon: const Icon(Icons.login),
+            ),
+            const SizedBox(height: 20),
+            const ThemeSwitchWidget(),
+            const SizedBox(height: 20),
+            const AnimeTitleLanguageSwitch(),
           ],
         ),
       ),
