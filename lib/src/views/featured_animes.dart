@@ -1,5 +1,6 @@
 import 'package:anime_app/src/api/get_anime_by_ranking_type_api.dart';
 import 'package:anime_app/src/core/screens/error_screen.dart';
+import 'package:anime_app/src/futures/anime/pages/anime_details_screen.dart';
 import 'package:anime_app/src/futures/anime/widgets/anime_tile.dart';
 import 'package:anime_app/src/core/widgets/loader.dart';
 import 'package:anime_app/src/futures/anime/pages/view_all_animes_screen.dart';
@@ -73,7 +74,21 @@ class FeaturedAnimes extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final anime = animes.elementAt(index);
 
-                    return AnimeTile(anime: anime.node);
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AnimeDetailsScreen(
+                              id: anime.node.id,
+                            ),
+                          ),
+                        );
+                      },
+                      child: AnimeTile(
+                        anime: anime.node,
+                      ),
+                    );
                   },
                 ),
               ),

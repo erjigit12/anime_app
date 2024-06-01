@@ -18,7 +18,7 @@ class AnimeCategory {
   }
 }
 
-const animeCategory = [
+const animeCategories = [
   AnimeCategory(title: 'Top Anime', rankingType: 'all'),
   AnimeCategory(title: 'Top Airing', rankingType: 'airing'),
   AnimeCategory(title: 'Top Upcoming', rankingType: 'upcoming'),
